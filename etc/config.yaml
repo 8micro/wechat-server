@@ -1,0 +1,12 @@
+version: v.1.0.0
+pidfile: ./wechat_server.pid
+retrystartup: true
+securityroot: ./security
+listen:
+  hosts: [":8085"]
+  enablecors: true
+logger:
+    logfile: ./logs/wechat_server.log
+    loglevel: info
+    logsize: 20971520
+...
