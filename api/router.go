@@ -68,7 +68,7 @@ func ping(c *Context) error {
 
 func optionsHandler(c *Context) error {
 
-	allowHeaders := r.Header.Get("Access-Control-Request-Headers")
+	//allowHeaders := r.Header.Get("Access-Control-Request-Headers")
 
 	c.WriteHeader(http.StatusOK)
 	return nil

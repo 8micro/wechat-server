@@ -1,6 +1,6 @@
 package etc
 
-import "github.com/8micro/gutils/logger"
+import "github.com/8micro/gounits/logger"
 import "gopkg.in/yaml.v2"
 
 import (

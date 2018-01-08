@@ -4,9 +4,9 @@ import "github.com/8micro/wechat-server/api"
 import "github.com/8micro/wechat-server/etc"
 import "github.com/8micro/wechat-server/security"
 import "github.com/8micro/wechat-server/server"
-import "github.com/8micro/gutils/flocker"
-import "github.com/8micro/gutils/logger"
-import "github.com/8micro/gutils/system"
+import "github.com/8micro/gounits/flocker"
+import "github.com/8micro/gounits/logger"
+import "github.com/8micro/gounits/rand"
 
 import (
 	"flag"
@@ -34,7 +34,7 @@ func NewWechatServer() (*WechatServer, error) {
 	}
 
 	logger.OPEN(etc.LoggerArgs())
-	key, err := system.MakeKeyFile("./8m_wechat_server.key") //服务器唯一标识文件
+	key, err := rand.UUIDFile("./8m_wechat_server.key") //服务器唯一标识文件
 	if err != nil {
 		return nil, err
 	}

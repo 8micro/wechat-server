@@ -1,6 +1,6 @@
 package api
 
-import "github.com/8micro/gutils/system"
+import "github.com/8micro/gounits/rand"
 
 import (
 	"context"
@@ -83,7 +83,7 @@ func (r *Response) Status() int {
 func NewContext(w http.ResponseWriter, r *http.Request, store Store) *Context {
 
 	return &Context{
-		ID:       system.MakeKey(true),
+		ID:       rand.UUID(true),
 		request:  r,
 		response: NewResponse(w),
 		store:    store,

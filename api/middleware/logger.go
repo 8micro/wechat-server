@@ -1,6 +1,6 @@
 package middleware
 
-import "github.com/8micro/gutils/logger"
+import "github.com/8micro/gounits/logger"
 
 import (
 	"net/http"
